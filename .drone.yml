@@ -1,4 +1,12 @@
 build:
-  image: golang
+  image: python:$$PYTHON_VERSION
   commands:
-    - echo hello world
+    - pip install -r dev-requirements.txt
+    - flake8 setup.py drone tests
+    - nosetests --with-coverage --cover-package drone -v
+
+matrix:
+  PYTHON_VERSION:
+    - 2.7
+    - 3.4
+    - 3.5
