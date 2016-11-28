@@ -1,7 +1,6 @@
 image: python:2.7.10
-
-deploy:
-  heroku:
-  app: image-app-tdi
+  deploy:
+    heroku:
+    app: image-app-tdi
 
 
