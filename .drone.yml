@@ -1,9 +1,7 @@
 image: python:2.7.10
 script:
-    - virtualenv pythonEnv
-    - source pythonEnv/bin/activate
     - pip install -r requirements.txt
-    - python app.py
+    - python test.py
 
 
 
