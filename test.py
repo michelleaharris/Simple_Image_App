@@ -19,7 +19,7 @@ class AppTestCase(unittest.TestCase):
 		data = dict(file=(io.BytesIO(b'test'), 'test.jpg'))
 		res = self.app.post('/upload', data=data, follow_redirects=True)
 		assert res.status_code == 200
-		assert 'file saved' in res.data
+		assert b'test' in res.data
 
 if __name__ == '__main__':
 	unittest.main()
