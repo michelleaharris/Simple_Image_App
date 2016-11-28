@@ -3,7 +3,7 @@ script:
     - virtualenv pythonEnv
     - source pythonEnv/bin/activate
     - pip install -r requirements.txt
-    - python test.py
+    - python app.py
 
 
 
